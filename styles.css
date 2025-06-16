@@ -62,10 +62,54 @@ header nav ul li a {
     z-index: 1;
 }
 
+/* Estilo da seção Sobre */
+#sobre {
+    background-color: #ffffff;
+    padding: 80px 20px;
+    text-align: center;
+    font-size: 25px;
+}
+
+#sobre h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
 section {
     padding: 40px 20px;
     text-align: center;
 }
+
+
+/* Estilo da seção de Projetos */
+#projetos {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #f4f4f4; /* Cor de fundo opcional */
+}
+
+#projetos h2 {
+    font-size: 2.3em;
+    margin-bottom: 20px;
+}
+
+/* Contêiner de vídeos */
+.video-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espaçamento entre os vídeos */
+    flex-wrap: wrap; /* Garante que os vídeos se ajustem em telas menores */
+}
+
+/* Estilo para os iframes dos vídeos */
+.video-container iframe {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombras para dar um toque estético */
+}
+
+
+
 
 #projetos .project-gallery {
     display: flex;
@@ -93,4 +137,18 @@ footer .social-links a {
 
 footer .social-links a:hover {
     text-decoration: underline;
+}
+
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .video-container {
+        flex-direction: column; /* Empilha os vídeos em vez de alinhá-los em linha */
+        align-items: center; /* Centraliza os vídeos na tela */
+    }
+
+    .video-container iframe {
+        width: 100%; /* Faz os vídeos ocuparem toda a largura da tela */
+        max-width: 500px; /* Define a largura máxima para os vídeos */
+    }
 }
