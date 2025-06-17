@@ -90,7 +90,7 @@ section {
 
 #projetos h2 {
     font-size: 2.3em;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 /* Contêiner de vídeos */
@@ -122,6 +122,103 @@ section {
     border-radius: 8px;
 }
 
+/* Estilos gerais para a seção */
+#cards {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+#cards h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    padding-bottom: 40px;
+}
+
+/* Contêiner dos cards */
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px 200px; /* Espaço entre os cards */
+    flex-wrap: wrap; /* Permite que os cards se ajustem em telas pequenas */
+}
+
+/* Estilo para cada card */
+.card {
+    width: 400px; /* Largura do card */
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombras para o efeito de profundidade */
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease; /* Efeito ao passar o mouse */
+}
+
+/* Efeito de hover para os cards */
+.card:hover {
+    transform: scale(1.05); /* Aumenta o card ao passar o mouse */
+}
+
+/* Estilo para a imagem do card */
+.card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Garante que a imagem cubra toda a área do card */
+    border-bottom: 1px solid #ddd; /* Linha entre a imagem e as informações */
+}
+
+/* Estilo para as informações do card */
+.card-info {
+    padding: 15px;
+}
+
+.card-location {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card-date, .card-time {
+    font-size: 1em;
+    color: #666;
+}
+
+/* Estilo da seção de links de redes */
+#redes {
+    padding: 40px 50px;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+#redes h2 {
+    font-size: 2.5em;
+    margin: 60px;
+
+}
+
+/* Estilo para os links das redes */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px 300px;/* Espaçamento entre os ícones */
+    flex-wrap: wrap;
+}
+
+
+/* Estilo para cada ícone */
+.social-icon img {
+    width: 50px; /* Tamanho do ícone */
+    height: 50px;
+    transition: transform 0.3s ease; /* Efeito ao passar o mouse */
+}
+
+/* Efeito de hover nos ícones */
+.social-icon:hover img {
+    transform: scale(1.1); /* Aumenta o ícone ao passar o mouse */
+}
+
+
+
 footer {
     background: #000;
     color: #fff;
@@ -150,5 +247,18 @@ footer .social-links a:hover {
     .video-container iframe {
         width: 100%; /* Faz os vídeos ocuparem toda a largura da tela */
         max-width: 500px; /* Define a largura máxima para os vídeos */
+    }
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .social-links {
+        flex-direction: column; /* Empilha os ícones em vez de alinhá-los em linha */
+        align-items: center; /* Centraliza os ícones na tela */
+    }
+
+    .social-icon img {
+        width: 60px; /* Aumenta o tamanho dos ícones em telas menores */
+        height: 60px;
     }
 }
