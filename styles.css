@@ -285,6 +285,7 @@ section {
     gap: 40px;
     display: flex;      
     flex-wrap: wrap;
+    align-items: center;
 }
 
 .contact-item {
