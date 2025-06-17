@@ -241,6 +241,7 @@ section {
   
     padding: 50px 20px;
     text-align: center;
+    
 }
 
 #contato h2 {
@@ -248,12 +249,15 @@ section {
     margin-bottom: 1.5rem;
     color: #000000;
     margin-bottom: 30px;
+    
 }
 
 .contact-methods {
     display: flex;
     justify-content: center;
     gap: 40px;
+    display: flex;      
+    flex-wrap: wrap;
 }
 
 .contact-item {
@@ -264,6 +268,7 @@ section {
     width: 350px;
     background-color: rgb(11, 11, 11);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+ 
     
 }
 
