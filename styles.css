@@ -244,7 +244,7 @@ section {
 .social-links {
     display: flex;
     justify-content: center;
-    gap: 30px 200px;/* Espaçamento entre os ícones */
+    gap: 10px 10px;/* Espaçamento entre os ícones */
     flex-wrap: wrap;
     padding-bottom: 10px;
  
@@ -391,7 +391,7 @@ section {
 footer {
     background: #000;
     color: #fff;
-    padding: 20px 0;
+    padding: 10px 0;
     text-align: center;
 }
 
@@ -412,6 +412,9 @@ footer .social-links a:hover {
         flex-direction: column; /* Empilha os vídeos em vez de alinhá-los em linha */
         align-items: center; /* Centraliza os vídeos na tela */
     }
+        .social-icon img {
+        width: 120px; /* Menor tamanho em telas pequenas */
+    }
 
     .video-container iframe {
         width: 100%; /* Faz os vídeos ocuparem toda a largura da tela */
@@ -422,12 +425,30 @@ footer .social-links a:hover {
 /* Responsividade para telas menores */
 @media (max-width: 768px) {
     .social-links {
-        flex-direction: column; /* Empilha os ícones em vez de alinhá-los em linha */
+      
+        font-size: small;
         align-items: center; /* Centraliza os ícones na tela */
     }
 
     .social-icon img {
         width: 60px; /* Aumenta o tamanho dos ícones em telas menores */
         height: 60px;
+    }
+}
+
+@media (max-width: 400px) {
+    .social-icon img {
+        width: 50px;
+        height: 50px;
+        
+    }
+}
+
+ /* Tamanho ainda menor em telas muito pequenas */
+    
+@media (max-width: 320px) {
+    .social-icon img {
+        width: 40px; /* Tamanho reduzido para telas muito pequenas */
+        height: 40px;
     }
 }
