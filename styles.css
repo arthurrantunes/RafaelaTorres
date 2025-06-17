@@ -1,12 +1,21 @@
 /* Reset para garantir que a formatação seja consistente */
+
+
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Roboto", sans-serif;
     background-color: #f4f4f4;
 }
 
@@ -83,7 +92,8 @@ section {
 
 /* Estilo da seção de Projetos */
 #projetos {
-    padding: 40px 20px;
+    padding: 10px 20px;
+    padding-top: 30px;
     text-align: center;
     background-color: #f4f4f4; /* Cor de fundo opcional */
 }
@@ -188,11 +198,18 @@ section {
     padding: 40px 50px;
     text-align: center;
     background-color: #f4f4f4;
+       background-color: rgb(242, 239, 234);
+       margin: 0 auto;
+    max-width: 1200px; /* Limita a largura máxima da seção */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidade */
 }
 
 #redes h2 {
     font-size: 2.5em;
-    margin: 60px;
+    margin-bottom: 30px;
+    
 
 }
 
@@ -200,8 +217,10 @@ section {
 .social-links {
     display: flex;
     justify-content: center;
-    gap: 20px 300px;/* Espaçamento entre os ícones */
+    gap: 20px 30px;/* Espaçamento entre os ícones */
     flex-wrap: wrap;
+    padding-bottom: 10px;
+ 
 }
 
 
@@ -216,6 +235,121 @@ section {
 .social-icon:hover img {
     transform: scale(1.1); /* Aumenta o ícone ao passar o mouse */
 }
+
+
+#contato {
+  
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#contato h2 {
+    font-size: 2.5em;
+    margin-bottom: 1.5rem;
+    color: #000000;
+    margin-bottom: 30px;
+}
+
+.contact-methods {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.contact-item {
+   
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    background-color: rgb(11, 11, 11);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+}
+
+.contact-item h3 {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.contact-item p {
+    font-size: 1.2rem;
+    color: #ffffff;
+}
+
+.contact-item:hover {
+    transform: translateY(-5px); /* Levanta o card um pouco */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Aumenta a sombra ao passar o mouse */
+}
+
+.contact-item a {
+    color: #164d90;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+}
+
+
+
+.comentarios {
+    background-color: #f4f4f4;
+    padding: 30px;
+    text-align: center;
+    position: relative;
+    overflow: hidden; /* Esconde o conteúdo que não cabe */
+}
+
+.comentarios h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.comentarios-container {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+.comentarios-inner {
+    display: flex;
+    animation: scrollComentarios 20s linear infinite;
+}
+
+.comentario {
+    margin: 0 50px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-size: 1.2rem;
+    color: #555;
+    width: 300px; /* Ajuste a largura conforme necessário */
+}
+
+.comentario span {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #0073e6;
+}
+
+/* Efeito de rotação contínua */
+@keyframes scrollComentarios {
+    0% {
+        transform: translateX(0); /* Inicia do início */
+    }
+    100% {
+        transform: translateX(-50%); /* Vai até a metade do conteúdo (duplicado) */
+    }
+}
+
 
 
 
